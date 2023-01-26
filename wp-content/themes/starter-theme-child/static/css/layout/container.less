@@ -1,0 +1,210 @@
+/* Containers */
+body {
+  * {
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+
+/** Displays **/
+
+// Flex
+.flexbox {
+  display: flex;
+  
+  &.child-flex-1 {
+    > * {
+      flex: 1;
+    }  
+  }
+  &.col-in-mobile {
+    // mobile
+    @media screen and (max-width: @screen-s) {
+      flex-direction: column;
+    }
+  }
+}
+//
+.flex-wrap { flex-wrap: wrap; }
+
+.justify-content-start  { justify-content: flex-start; }
+.justify-content-end    { justify-content: flex-end; }
+.justify-content-center { justify-content: center; }
+.justify-content-space-between    { justify-content: space-between; }
+.justify-content-space-around    { justify-content: space-around; }
+// 
+.align-items-center { align-items: center; }
+.align-items-start  { align-items: flex-start; }
+.align-items-end    { align-items: flex-end; }
+
+.flex-none { flex: none; }
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.flex-3 { flex: 3; }
+
+// Other
+.display-block        { display: block; }
+.display-inline-block { display: inline-block; }
+
+.is-hidden            { display: none; }
+
+//tablet < 768px
+.is-hidden-on-tablet {
+  @media screen and (max-width: @screen-m) {
+    display: none;
+  }
+}
+//mobile < 690px
+.is-hidden-on-mobile {
+  // mobile
+  @media screen and (max-width: @screen-s) {
+    display: none;
+  }
+}
+// 
+
+// Generic 
+//
+.row {
+  max-width: 1350px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: padding .3s; 
+ 
+  //tablet
+  @media screen and (min-width: @screen-m) and (max-width: 1450px) {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  //mobile
+  @media screen and (max-width: @screen-m) {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+} 
+
+// Title of great section
+//
+.block-title { 
+  // tablet
+  @media screen and (min-width: @screen-s) {
+    max-width: 62%;
+  }
+}
+
+
+// Section with background color
+//
+// generic 
+*[class^="background-"] {
+  > .row {
+    // row
+    padding-top: @space-xl;
+    padding-bottom: @space-xl;
+  }
+}
+// dark grey
+.background-dark-grey {
+  background-color: @color-tertiary;
+  color: @color-grey-400;
+
+  .title {
+    color: #fff;
+  }
+}
+// dark grey
+.background-light-grey {
+  background-color: #eee;
+}
+// sweet orange
+.background-sweet-orange {
+  background-color: @color-secondary;
+}
+
+
+// Container : Contact section
+//
+.contact-container {
+  background: #ffe2c4 url('../../img/cover-contact-mobile.jpg') no-repeat center bottom;
+  padding-top: @space-m;
+  padding-bottom: 75%;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 500px;
+  position: relative;
+  //desktop
+  @media screen and (min-width: @screen-m) {
+    background-image: url('../../img/cover-contact.jpg');
+    background-size: cover;
+    padding-bottom: @space-m;
+  }
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    //background-position: 60% center;
+  }
+
+  > * {
+    //row
+    position: relative;
+    z-index: 5;
+    padding-top: 0;
+    padding-bottom: 0; 
+    color: @color-text-nav;
+    //desktop
+    @media screen and (min-width: @screen-l) {
+      padding-right: 400px;
+    }
+    //tablet
+    @media screen and (min-width: 767.5px) and (max-width: @screen-l) {
+      padding-right: 38%;
+    }
+
+    .contact-details {
+      flex-wrap: wrap;
+      //desktop
+      @media screen and (min-width: @screen-xxl) {        
+        max-width: 80%;
+      }
+      //tablet
+      @media screen and (max-width: @screen-m) {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      
+      > * {
+        min-width: 48%;
+        font-weight: 400; 
+        padding: 0 @space-xs 0 0;
+        display: flex;
+        flex: 1;
+        align-items: baseline;
+
+        &, p {
+          line-height: 1.1;
+          //tablet
+          @media screen and (max-width: @screen-l) {
+            font-size: @font-size-h6;
+          }
+        }
+        &:not(:last-of-type) {
+          //tablet
+          @media screen and (max-width: @screen-m) {
+            margin-bottom: 30px;
+          }
+        }
+        i {
+          margin-right: @space-xs;
+          font-size: 1.8rem;
+        }
+      }
+    }
+    //.contact-details
+  }
+}

@@ -1,0 +1,115 @@
+/* Footer */
+.footer {
+  background-color: @color-tertiary;
+
+  > * {
+    // row
+    padding: @space-xl 0 @space-m;
+    display: flex;
+    color: @color-grey-400;
+    font-size: 1.4rem;
+
+    // tablet
+    @media screen and (max-width: @screen-l) {      
+      padding: @space-m 0;
+    }
+    // mobile 
+    @media screen and (max-width: @screen-xs) { 
+      flex-direction: column;
+    }
+
+    > * {
+      flex: 2;
+    }
+
+    .logo {
+      flex: 1;
+      max-width: 14%;
+      min-width: 80px;
+      margin: 0 40px 20px 0;
+    }
+
+    // link
+    a:link, a:visited, a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    // Content blocks
+    .footer-content-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      //tablet 
+      @media screen and (max-width: 767.5px) {
+        flex-direction: column;
+      }
+
+      .title {
+        color: #fff;
+      }
+
+      > * {
+        flex: 1;
+        //tablet
+        @media screen and (max-width: @screen-l) {
+          margin-bottom: @space-m;
+        }
+        .block-container {
+          .flexbox {
+            i.fa-solid {
+              margin: 3px 20px 0 0;
+              font-size: 1.8rem;
+            }
+          }
+        }
+
+        &.footer-navigation {
+          //desktop
+          @media screen and (min-width: @screen-l) {
+            max-width: 30%;
+          }
+          //mobile
+          @media screen and (max-width: @screen-m) {
+            //display: none;
+          }
+        }
+        &.social-block {
+          //tablet
+          @media screen and (max-width: @screen-l) {
+            min-width: 100%;
+          }
+          //desktop
+          @media screen and (min-width: 767.5px) {
+            max-width: 23%;
+          }
+          a {
+            margin-right: 15px;
+          }
+        }
+      }
+      
+    }
+  }
+
+  .legal-notice {    
+    font-size: 1.4rem;
+    margin-top: 60px;
+    margin-bottom: 0;
+    color: @color-grey-400;
+    min-width: 100%;
+    // mobile 
+    @media screen and (max-width: @screen-s) {
+      margin-top: @space-s; 
+      padding-top: @space-s;
+      border-top: 1px solid #414141;
+    }
+    span {
+      padding: 0 15px;
+    }
+  }
+}
+
+// Pre Footer
+.pre-footer {
+  padding: 12px;
+}

@@ -1,0 +1,69 @@
+/* Generic */
+
+@import "base/variable";
+@import "base/typography";
+
+@import "component/button";
+@import "component/form";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+@import "layout/container";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+ 
+  body {
+    background: #fff;
+    font-family: @font-primary;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Margins classes
+.margin-xxl {
+  margin-bottom: @space-xxl; 
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    margin-bottom: @space-xl;
+  }
+}
+.margin-xl {
+  margin-bottom: @space-xl;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    margin-bottom: @space-l;
+  }
+}
+.margin-l {
+  margin-bottom: @space-l;
+}
+.margin-m {
+  margin-bottom: @space-m;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    margin-bottom: @space-s;
+  }
+}
+.margin-s {
+  margin-bottom: @space-s;
+}
+.margin-xs {
+  margin-bottom: @space-xs;
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Transform
+.revert-vertical {
+  transform: rotate(180deg);
+}
+.filter-invert {
+  filter: invert();
+}

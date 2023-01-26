@@ -1,0 +1,181 @@
+/* Qui suis-je ? */
+@import "../styles.less";
+
+.page-template-page-about {
+  // Cover
+  .cover {
+    > * {
+      position: absolute;
+      z-index: 30!important;
+      padding-top: 160px;
+      // mobile
+      @media screen and (max-width: @screen-m) {
+        padding-top: 90px;
+      }
+      .title {
+        color: #fff!important;
+      }
+    }
+  }
+
+  .immersif-background {
+    margin-bottom: 200px;
+    height: 1150px;
+    display: flex;
+    // mobile
+    @media screen and (max-width: 767.5px) {  
+      margin-bottom: -@space-s;
+      height: auto!important;
+    }
+    // background
+    .bg-block {
+      width: 100%;
+      height: inherit;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // mobile
+      @media screen and (max-width: 767.5px) {
+        height: 40%;
+        background-size: 103%;
+        background-position: top center;
+      }
+    }    
+    // content
+    .content-text-block {  
+      position: relative;
+      z-index: 50;
+      height: 100%;
+
+      .content {
+        position: relative;
+        bottom: 0;
+        margin: 200px auto 0;
+        background-color: #fff;
+        padding: @space-l 18px;
+        max-width: 780px;
+        width: 100%;
+        //tablet
+        @media screen and (min-width: @screen-m) {
+          position: absolute;
+          bottom: -400px;
+          right: 0;
+          padding: @space-xl @space-xxl;
+          margin: auto;
+          width: 92%;
+        }
+        &.revert {
+          right: auto;
+          left: 0;
+        }
+        .title {
+          margin-bottom: @space-l;
+          //tablet
+          @media screen and (max-width: @screen-m) {
+            margin-bottom: 40px;
+          }
+        }
+        p:not(:last-of-type) {
+          margin-bottom: 30px;
+        }
+      }
+      
+    }
+
+    // cover
+    &.my-cover {
+      .bg-block {  
+        background-image: url('../../img/cover-about.jpg');
+      }
+      .content .illustration {
+        position: absolute;
+        z-index: 50;
+        right: 92%;
+        top: 63%;
+        // mobile
+        @media screen and (max-width: @screen-m) {
+          right: 0;
+          top: initial;
+          height: 160px;          
+        }
+      }
+    }
+    // ma philosophie
+    &.my-philosophy {
+      height: 1000px;
+      .bg-block {  
+        background-image: url('../../img/about-philosophie.jpg');
+      }
+      .content {
+        //tablet
+        @media screen and (min-width: @screen-m) {
+          bottom: -300px;
+        }
+        .illustration {
+          position: absolute;
+          right: -47px;
+          top: 43%;
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            display: none;
+          }
+        }
+        .illustration-top {
+          position: absolute;
+          top: -3%;
+          left: 5%;
+          transform: rotate(180deg);
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            top: -74px;
+            right: 45px;
+            transform: rotate(-90deg);
+            left: initial;
+          }
+        }
+      }
+    }
+    // mes engagements
+    &.my-engagment {
+      height: 1000px;
+      .bg-block { 
+        background-image: url('../../img/about-engagement.jpg');
+      }
+      .content {
+        //tablet
+        @media screen and (min-width: @screen-m) {
+          bottom: -150px;
+        }
+
+        .illustration, 
+        .illustration-top {
+          position: absolute;          
+          transform: rotate(90deg);
+        }
+        .illustration {
+          top: 90%;
+          left: -6%;
+          transform: rotate(-90deg);
+          // mobile
+          @media screen and (max-width: @screen-m) {
+            display: none;
+          }
+        }
+        .illustration-top {
+          top: 9%;
+          right: 5%;
+          // mobile
+          @media screen and (max-width: @screen-m) { 
+            transform: rotate(-90deg);
+            top: 0;
+            right: -5%;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

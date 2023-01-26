@@ -1,0 +1,77 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{# Cover #}
+	<div class="row cover">
+
+		<div class="block-title">
+			<h1 class="title">{{ post.title }}</h1>
+		</div> 
+
+	</div>
+
+	{# Parcours #}
+	<div class="immersif-background my-cover">
+		<div class="bg-block"></div>
+		<div class="row content-text-block">
+			<div class="content">
+				<h2 class="align-center title">Mon parcours</h2>
+
+				<p><span class="display-block h5 margin-xs">Je m’appelle Léa.</span> Nantaise d’origine mais tomber en amour pour le Morbihan, je m’y suis installé depuis quelques années.</p>
+				<p>J’eus ma révélation pour le massage bien-être en 2016, lors d’un festival de sensibilisation et d’intégration aux handicaps. <br>Bénévole dans l’espace détente, j’ai observé les résultats de courts massages : du relâchement, de l’apaisement et des sourires. Beaucoup de sourires ! Je me suis dit « d’accord, c’est ça que je veux faire. »</p>
+				<p>Depuis, je me suis formée au massage bien-être à l’école Azenday sur Nantes. J’ai ainsi pu développer des techniques professionnelles et découvrir la richesse du milieu du bien-être.</p>
+				<p>En parallèle, je mets en pratique <strong>plusieurs techniques de relaxation issues du massage, du yoga, de la sophrologie, de la méditation, du chamanisme ou encore de la communication non violente</strong>. Remarquant les résultats probants sur mon être, je me sens obligée de partager ces découvertes.</p>
+				<p>Au fil des jours, <strong>je continue de me former</strong> pour proposer des nouvelles techniques de massages et de relaxation pour permettre à d’autres âmes que la mienne de bénéficier du bien-être que cela procure.</p>
+			
+				<br><br>
+				<a href="/contact" title="Me contacter" class="button button-primary">Me contacter</a>
+
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-7.svg" alt="" class="illustration" height="250" />
+			</div>
+		</div>
+	</div>
+
+	{# Philosophie #}
+	<div class="immersif-background my-philosophy">
+		<div class="bg-block"></div>
+		<div class="row content-text-block">
+			<div class="content revert">
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration-top" height="190" />
+				<h2 class="align-center title">Ma philosophie</h2>
+
+				<p>Les listes des choses à faire qui s’allongent, les obligations professionnelles, familiales, sociétales qui s’accumulent !</p> 
+				<p class="h6 margin-s">Et votre « soi » dans tout cela ?</p>
+				<p>A travers mon activité de bien-être c’est vous donner la porte d’accès à votre Être qui m’importe. 
+				Vous donnez l’opportunité de <strong>renouer avec vous-mêmes</strong>, d’être apaisé malgré une société oppressante et trop rapide. 
+				Vous proposer des instants uniques pour <strong>relâcher les pressions du corps et de l’esprit</strong> ; respirer enfin rien que pour vous.</p>
+				<p><strong>Se reconnecter à soi</strong>, c’est aussi s’accepter tel que Je Suis. Souvent noyer dans la multitude, nous oublions d’apprendre à nous aimer. Étant passer (et y travaillant toujours) par une longue quête d’acception de moi-même, je saurai plus qu’heureuse de pouvoir vous aider à faire quelques pas sur ce chemin.</p>
+				<p>Ma valeur intrinsèque est <strong>le respect</strong>. Aucun jugement ne sera émis lors de mes séances. Je sais être une bonne oreille et mes paroles ne sont que le vecteur d’astuces et d’exercices de bien-être que je partage avec vous. </p>
+			
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-8.svg" alt="" class="illustration" height="320" />
+			</div>
+		</div>
+	</div>
+
+	{# Engagements #}
+	<div class="immersif-background my-engagment">
+		<div class="bg-block"></div>
+		<div class="row content-text-block">
+			<div class="content">
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration-top" height="45" />
+				<h2 class="align-center title">Mes engagements</h2>
+				<p class="h6 margin-xs">Ancrée à mon territoire et portant des valeurs environnementales, il m’est essentiel de rester cohérente dans ma vie professionnelle. </p>
+				<p>Une partie de mon matériel est <strong>fait-main et/ou issues du réemplois</strong>. 
+					L’autre partie provient <strong>d’artisans et de producteurs locaux</strong> qui sont et resteront mes fournisseurs privilégiés.</p>
+				<p>Je m’engage ainsi, autant que faire ce peux, à utiliser des <strong>produits locaux</strong>, que ce soit mes huiles ou le matériel que j’utilise.
+					Et Je veille à utiliser que des <strong>produits éthiques et d’origine écologique</strong> en étant vigilante aux labels et lieux de production/fabrication.</p>
+				<p>Par exemple, l’huile utilisée pour mes massages est de <strong>l’huile de Chanvre</strong> composées de 100% de graine de chanvre issues de 
+				 <strong>l’agriculture biologique française, pressées et conditionnées en Bretagne</strong>.</p>
+				<p>Tendre à une pratique environnementalement <strong>responsable</strong> ; participer à une économie saine et locale tout en renouant avec vous-même, voilà ce qui vous attend dans ce petit cocon dans lequel je vous invite !</p>
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" class="illustration" height="48" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="margin-xl"></div>
+
+{% endblock %}

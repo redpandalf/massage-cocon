@@ -1,0 +1,113 @@
+/* Navigation */
+
+nav {
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+// Main Menu 
+.nav-main {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      margin: 0 1.5vw;
+      display: flex;
+      align-items: center;
+
+      // design for desktop
+      // desktop
+      @media  screen and (min-width: 768.5px) {
+        &:hover, 
+        &.current-menu-item {
+          a {
+            text-shadow: 0 0 0.015px;
+            box-shadow: 0 5px 0 0 @color-primary;
+          }
+        }
+        a, a:visited, a:link {
+          display: block;
+          padding: 10px 3px;
+          font-family: @font-primary;
+          font-size: @font-size-base;
+          font-weight: 400;
+          color: @color-text-nav;
+        }
+      }
+      // design for mobile
+      // mobile
+      @media  screen and (max-width: @screen-m) {
+        > * {
+          padding: 15px 0;
+          display: block;
+          width: 100%;
+        }
+      }
+      // Tablet
+      @media  screen and (min-width: @screen-xxl) {
+        margin: 0 24px;
+      }
+
+      a, a:link, a:visited {        
+        font-size: @font-size-base-mobile;
+        // Tablet
+        @media  screen and (max-width: @screen-l) {
+          font-size: 1.3rem;
+        }
+      }
+      
+      // last item
+      &:last-of-type {
+        a {
+          &:after {
+            content: "\f0e0";
+            font-family: "Font Awesome 6 Free";
+            display: inline-block;
+            // desktop
+            @media  screen and (min-width: @screen-l) {
+              margin-left: 5px;
+            }
+            // Tablet
+            @media  screen and (min-width: @screen-m) and (max-width: @screen-l) {
+              display: none;
+            }
+          }
+        }  
+      }
+      // first item 
+      &:first-of-type {
+        a {
+          i {
+            // desktop
+            @media  screen and (min-width: 992.5px) {
+              display: none;
+            }
+          }
+          span {
+            // Tablet
+            @media  screen and (min-width: 769px) and (max-width: @screen-l) {
+              display: none;
+            }
+          }
+        } 
+      }
+      //
+    }
+    // li
+  }
+}
+
+
+// footer navigation
+.footer-navigation {
+  > ul {
+    > li {
+      > * {
+        padding: 12px 0;
+      }
+    }
+  }
+}

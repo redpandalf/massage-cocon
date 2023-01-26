@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="logo">
+    <a href="{{ site.url }}" title="{{ site.name }}">
+      <img src="https://cocon.alexiasavva.fr/wp-content/uploads/logo-cocon-blanc.png" alt="{{ site.name }}" width="150" />
+    </a>
+  </div>
+
+  <div class="footer-content-blocks">
+    <nav class="footer-navigation" role="navigation">
+      {% include "menu.twig" with { 'type': footer_menu } %}
+    </nav>
+
+    <div class="contact-block">{{ footer_block_contact }}</div>
+    <div class="social-block">{{ footer_block_social }}</div>
+
+    <p class="legal-notice">{{"now"|date('Y')}} Cocon <span>|</span> Tous droits réservés <span>|</span> <a href="/" title="Mentions Légales">Mentions Légales</a></p>
+  </div>
+  
+</div>
+

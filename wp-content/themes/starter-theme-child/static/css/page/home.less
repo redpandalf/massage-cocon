@@ -1,0 +1,125 @@
+/* Homepage */
+@import "../styles.less";
+
+.page-template-home {
+
+  //
+  .cover {
+    background: url('../../img/cover-home.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 800px;
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      min-height: 75vh;   
+    }
+
+    > * {
+      color: #fff;
+    }
+
+    //desktop
+    @media screen and (min-width: @screen-l) {
+      .block-title {
+        max-width: 520px;
+      }
+    }
+  }
+
+  // Block Citation
+  .quote-block {
+    background: url('../../img/bg-citation.png') repeat center #fff;
+    padding-top: @space-xl;
+    padding-bottom: @space-xl;
+    font-size: 1.4rem;
+    color: @color-tertiary;
+    // Tablet
+    @media screen and (max-width: @screen-s) {
+      padding-top: @space-m;
+      padding-bottom: @space-m;
+    }
+    .quote {
+      font-family: @font-quote;
+      font-size: @font-size-h3;
+      line-height: 1;
+    }
+  }
+
+  // Block Prestation 
+  .prestations-block {
+    > * {
+      //row
+      .prestations-items {
+        justify-content: center;
+
+        > .item {
+          background-color: #fff;
+          color: @color-text;
+          flex: 1;
+          // tablet
+          @media screen and (min-width: 768.5px) {
+            max-width: 30%;
+          }
+          &:nth-child(2) {
+            // Desktop
+            @media screen and (min-width: @screen-s) {            
+              margin-left: 2%;
+              margin-right: 2%; 
+            }
+          }
+          > .content {
+            padding: 30px;
+            // tablet
+            @media screen and (min-width: @screen-l) {
+              min-height: 330px;
+              padding: @space-m;
+            }
+
+            .title, 
+            a:link, a:visited {
+              color: @color-tertiary;
+            }
+          }
+          img { 
+            display: block;
+            width: 100%;
+          }
+        }
+        //item
+      }
+    }
+  }
+
+  // Block Mes engagements
+  .engagements-block {
+    padding-top: @space-l;
+    padding-bottom: @space-l;
+
+    .engagements-items {    
+      align-items: baseline;
+      margin-right: auto;
+      margin-left: auto;
+      
+      // desktop
+      @media screen and (min-width: @screen-xxl) {
+        max-width: 80%;
+      }
+      > * {
+        width: 100%;
+        // mobile
+        @media screen and (max-width: @screen-s) {
+          margin: 0 auto @space-m;
+          width: 50%;
+        }
+        // mobile > desktop
+        @media screen and (min-width: @screen-s) {
+          &:nth-child(2) {
+            margin: 0 @space-m;
+          }
+        }
+      }
+      // Item
+    }
+  }
+
+
+}

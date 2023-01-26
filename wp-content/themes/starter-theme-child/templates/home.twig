@@ -1,0 +1,115 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="cover flexbox align-items-center background-dark-grey ">
+		<div class="row">
+
+			<div class="block-title">
+				<h1 class="title margin-m">Massages <br>& Relaxation</h1>
+				<p class="margin-l">Se reconnecter à soi, ses besoins et ses envies en relâchant les pressions du corps et de l’esprit.</p>
+
+				<a href="/contact" title="Prendre rendez-vous" class="button button-rdv">Prendre rendez-vous</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="quote-block">
+		<div class="row align-center">
+			<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class="revert-vertical"/>
+			<br><br>
+			<p class="quote">"Fais du bien à ton corps pour que ton âme ait envie d’y rester"</p>
+			<p class="margin-m">Proverbe Indien</p>
+			<img src="{{ site.theme.link }}/static/img/natural-illustration-4.svg" alt="" width="52" class=""/>
+		</div>
+	</div>
+
+	<div class="background-dark-grey prestations-block">
+		<div class="row">
+
+			<div class="align-center flexbox col-in-mobile align-items-center justify-content-space-around">
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="margin-l"/>
+				<h2 class="align-center title margin-l">Mes prestations</h2>
+				<img src="{{ site.theme.link }}/static/img/natural-illustration-3.svg" alt="" width="150" class="revert-vertical margin-l"/>
+			</div>
+
+			<div class="prestations-items flexbox col-in-mobile margin-l">
+				<div class="item margin-s">
+					<img src="https://picsum.photos/id/5/400/330" alt="" />
+					<div class="content">
+						<p class="badge">Bien-être</p>
+						<h3 class="title h4 margin-s">Les massages</h3>
+						<p class="margin-s">Fusce congue purus eget nulla dictum suscipit.<br><br>
+						Lorem ipsum sit amet. Nulla tas el vitae commodo gravida. Dolor lorem vo urna...</p>
+						<p><a href="/massages" title="Les massages bien être" class="read-more">En savoir plus...</a>
+					</div>
+				</div>
+				<div class="item margin-s">
+					<img src="https://picsum.photos/id/13/400/330" alt="" />
+					<div class="content">
+						<p class="badge">Relaxation</p>
+						<h3 class="title h4 margin-s">Les séances individuelles</h3>
+						<p class="margin-s">Suspendisse volutpat urna ac laoreet volutpat. Nulla egestas elit vitae commodo gravida? it vitae commodo gravida. <br>Lorem ipsum dolor sit amet, adipiscing elit.</p>
+						<p><a href="/relaxation-individuelle" title="Les séances individuelles" class="read-more">En savoir plus...</a>
+					</div>
+				</div>
+				<div class="item margin-s">
+					<img src="https://picsum.photos/id/27/400/330" alt="" />
+					<div class="content">
+						<p class="badge">Relaxation</p>
+						<h3 class="title h4 margin-s">Les séances collectives</h3>
+						<p class="margin-s">Nulla egestas elit vitae commodo gravida. Sed euismod a est a lobortis. <br><br>Etiam mattis, elit mi, fusce congue purus eget nulla dictum.</p>
+						<p><a href="/relaxation-collective/" title="Les séances collectives" class="read-more">En savoir plus...</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-2.svg" alt="" width="92"/></div>
+
+		</div>
+	</div>
+
+	
+	<div class="row engagements-block">
+
+		<div class="align-center margin-l">
+			<img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class="revert-vertical"/>
+		</div>
+
+		<h2 class="block-title margin-auto align-center margin-l title">Mes valeurs & mes engagements</h2>
+
+		<div class="engagements-items flexbox col-in-mobile margin-l">
+			<div class="align-center">
+				<img src="{{ site.theme.link }}/static/img/engagement-illustration-1.svg" alt="" />
+				<p class="h4">Bienveillance <br>& écoute</p>
+			</div>
+			<div class="align-center">
+				<img src="{{ site.theme.link }}/static/img/engagement-illustration-2.svg" alt="" />
+				<p class="h4">Environnemental<br> & écologique</p>
+			</div>
+			<div class="align-center">
+				<img src="{{ site.theme.link }}/static/img/engagement-illustration-3.svg" alt="" />
+				<p class="h4">Reconnexion à<br> soi garantie</p>
+			</div>
+		</div>
+
+		<div class="align-center margin-l">
+			<a href="/qui-suis-je" title="A propos de moi" class="button button-secondary">En savoir plus à propos de moi</a>
+		</div>
+
+		<div class="align-center"><img src="{{ site.theme.link }}/static/img/natural-illustration-1.svg" alt="" width="160" class=""/></div>
+
+	</div>
+
+	{# 
+		<h2>{{ foo }}</h2>
+		<p>{{ qux }}</p>
+		{% for post in posts %}
+			{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		{% endfor %}
+		
+		{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	#}
+
+{% endblock %}

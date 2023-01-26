@@ -1,0 +1,70 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{# Cover #}
+	<section class="margin-xl contact-container cover">
+		<div class="row">
+			<h1 class="margin-m">Contactez-moi</h1>
+			<p>Vous avez des questions ? Vous souhaitez vous accorder un instant rien que pour vous ou avec votre entourage ? </p>
+			<p class="margin-xl">Envoyez-moi un mail ou appelez-moi pour que l'on puisse échanger. </p>
+
+			<div class="flexbox contact-details">
+				<div>
+					<i class="fa-solid fa-phone"></i>
+					<div>
+						<p class="h6 margin-xs"><a href="tel:" title="">06 15 81 70 09</a></p>
+						<span class="caption">Du lundi au samedi, <br>de 9h00 à 16h00.</span>
+					</div>
+				</div>
+
+				<div>
+					<i class="fa-solid fa-at"></i>
+					<p class="h6">
+						<a href="mailto:" title="">contact@cocon.fr</a>
+					</p>
+				</div>
+				
+				<div>
+					<i class="fa-solid fa-paper-plane"></i>
+					<div>
+						<p class="h6 margin-xs">Je me deplace</p>
+						<span class="caption">Pays de Vannes & Auray</span>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+
+	{# Form #}
+	<section>
+
+		<div class="margin-xl row contact-formulaire">
+			<h2>Une question ?</h2>
+			<p class="sub-title margin-xl">je vous réponds...</p>
+	
+			{% include 'partial/form.twig' %}
+
+		</div>
+
+	</section>
+
+	{# Legal notice #}
+	<div class="background-light-grey align-center caption color-grey-950 legal-notice">
+		<div class="row">
+			<br class="is-hidden-on-mobile">
+			<p>Vos données sont traitées par Cocon afin de répondre à vos demandes d'information.<br>
+			Le destinataire est Cocon et son sous-traitant en charge de la gestion du serveur web (o2switch - France).<br>
+			Pour plus d'informations sur le traitement de vos données et l'exercice de vos droits, reportez-vous à notre politique de confidentialité
+			<br><br>
+			Les informations demandées sont nécessaires au traitement de votre demande.</p>
+			<br class="is-hidden-on-mobile">
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block contact %}
+	
+{% endblock %}

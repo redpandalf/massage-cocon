@@ -1,0 +1,208 @@
+/* Page Massages */
+
+@import "../styles.less";
+
+//
+// Common
+//
+.page-template-page-massages,
+.page-template-page-relaxations {
+  //
+  .cover {
+    // mobile
+    @media screen and (max-width: @screen-m) {}
+
+    > * {
+      color: #fff;
+    }
+
+    //desktop
+    @media screen and (min-width: @screen-l) {
+      .block-title {
+        max-width: 48%;
+      }
+    }
+
+    //desktop
+    //@media screen and (min-width: @screen-l) {
+    //  .block-title {
+    //    max-width: 520px;
+    //  }
+    //}
+  }
+
+  // Liste des Massages
+  .massages-list-section {
+    > * {
+      // list item
+      .list-items {
+        > * {
+          // item
+          display: flex;
+          flex-direction: column;
+          padding: 10px 5%;
+
+          &:not(:last-child) {
+            margin-bottom: @space-m;
+          }
+          // desktop
+          @media screen and (min-width: @screen-xl) {
+            width: 32%;
+            max-width: 450px;
+          }
+          // tablet
+          @media screen and (min-width: @screen-m) and (max-width: @screen-xl) {
+            width: 49%;
+          }
+          // desktop
+          @media screen and (max-width: @screen-m) {
+            padding: 0 0 @space-s;
+
+            &:not(:nth-last-child(-n+2)) {
+              border-bottom: 1px solid #c9c9c9;
+            }
+          }
+          center {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .detail {
+            i {
+              margin-right: @space-xs;
+            }
+          }
+          .title {
+            // tablet
+            @media screen and (max-width: @screen-l) {
+              font-size: @font-size-h5;
+            }
+          }
+          // le petit plus
+          &.highlight {
+            color: #333;
+            padding: 10px 45px;
+            // mobile
+            @media screen and (max-width: @screen-s) {
+              padding-left: @space-s;
+              padding-right: @space-s;
+            }
+ 
+            .badge {
+              color: @color-tertiary;
+              font-weight: 600;
+            }
+            .detail {
+              > * { 
+                flex: 1;
+                i {
+                  color: #fff;
+                }
+              }
+            } 
+          }
+        }
+        // item
+      }
+    }
+  }
+
+  // Déroulement
+  .process-section {
+    > * {
+      //desktop
+      @media screen and (min-width: @screen-s) {        
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+    }
+    .process-items {
+      justify-content: center;
+      //desktop
+      @media screen and (min-width: @screen-s) {        
+        justify-content: space-between;
+      }
+
+      > * {
+        &:not(:last-child) {
+          margin-bottom: @space-l;
+        }
+        //desktop
+        @media screen and (min-width: @screen-s) {
+          width: 44%;
+        }
+        //last item
+        &:last-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Les bienfaits
+  .benefits-section {
+    background: url('../../img/bg-citation.png') repeat center #fff;
+    // desktop
+    @media screen and (min-width: @screen-m) {
+      padding-top: @space-m;
+      padding-bottom: @space-m;
+    }
+
+    .flexbox {
+      > * {
+        padding: @space-s;
+      }
+    }
+  }
+
+  // Formulaire de contact
+  .contact-section {
+    background: url('../../img/contact-section-background.jpg') no-repeat bottom right #fff;
+    background-size: 100%;
+    // desktop
+    @media screen and (min-width: @screen-s) and (max-width: @screen-xxl) {
+      background-size: cover;
+      background-position: center bottom;
+    } 
+    > * {
+      .content {
+        // desktop
+        @media screen and (min-width: @screen-s) { 
+          min-width: 600px;
+        }
+        .flexbox.col-in-mobile {
+          // tablet
+          @media screen and (max-width: @screen-m) { 
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+// Page Massages 
+//
+.page-template-page-massages {
+  .cover {
+    background: url('../../img/cover-massages.jpg') no-repeat center;
+    background-size: cover;
+    min-height: 550px;
+    // mobile
+    @media screen and (max-width: @screen-m) {
+      height:  80vh;
+      min-height: 450px;
+      max-height: 550px;
+      background-position: unset;
+    }
+  }
+}
+
+// Page Relaxtion 
+.page-template-page-relaxations {}

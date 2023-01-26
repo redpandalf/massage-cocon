@@ -1,0 +1,136 @@
+// base
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// title
+@font-face {
+  font-family: 'Quesha';
+  src: url('https://cocon.alexiasavva.fr/wp-content/themes/starter-theme-child/static/font/Quesha.ttf')format('truetype');
+}
+
+// quote
+@font-face {
+  font-family: 'Apalu';
+  src: url('https://cocon.alexiasavva.fr/wp-content/themes/starter-theme-child/static/font/Apalu.ttf')format('truetype')
+}
+
+
+body, html {
+  color: @color-text; 
+  line-height: 1.5;
+  font-size: @font-size-base;
+}
+
+p {
+  line-height: 1.55;
+  margin: 0 0 22px;
+  font-weight: 400;
+
+  // tablet / mobile
+  @media screen and (max-width: @screen-l) {
+    font-size: @font-size-base-mobile;    
+  }
+
+  &:not([class]):last-of-type { margin: 0; }
+
+  strong, b {
+    font-weight: 500;
+  }
+}
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @font-secondary;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1, .h1 {
+  font-family: @font-secondary;
+  font-size: @font-size-h1;
+  font-weight: 400;
+  color: @color-tertiary;
+  line-height: .8;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    font-size: @font-size-h2;
+  }
+}
+h2, .h2 {
+  font-family: @font-secondary;
+  font-size: @font-size-h2;
+  font-weight: 400;
+  color: @color-tertiary;
+  line-height: .85;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    font-size: @font-size-h3;
+  }
+}
+h3, .h3 {
+  font-family: @font-primary;
+  font-size: @font-size-h3;
+  font-weight: 400;
+  line-height: .8;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    font-size: @font-size-h4;
+  }
+}
+h4, .h4 {
+  font-family: @font-primary;
+  font-size: @font-size-h4;
+  font-weight: 400;
+  color: @color-tertiary;
+  line-height: 1.35;
+  //tablet
+  @media screen and (max-width: @screen-l) {
+    font-size: 2.0rem;
+  }
+}
+h5, .h5 {
+  font-family: @font-primary;
+  font-size: @font-size-h5;
+  font-weight: 500;
+  color: @color-tertiary;
+  //tablet
+  @media screen and (max-width: @screen-m) {
+    font-size: @font-size-h6;
+  }
+}
+h6, .h6 {
+  font-family: @font-primary;
+  font-size: @font-size-h6;
+  font-weight: 500;
+  color: @color-tertiary;
+}
+
+.sub-title {
+  font-family: @font-quote;
+  font-size: @font-size-h3;
+}
+
+.caption {
+  font-size: @font-caption;
+  line-height: 1.6;
+  display: block;
+}
+.badge {
+  text-transform: uppercase;
+  color: @color-primary;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+
+.align-center { text-align: center; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+
+
+// COLORs
+.color-grey-500 { color: @color-grey-500; }
+.color-grey-950 { color: @color-grey-950; }
+.color-grey-900 { color: @color-grey-900; }
